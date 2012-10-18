@@ -1,6 +1,7 @@
 Feature: guess a number
 Scenario: prompt for number
-  When I visit homepage
+  Given the number to guess is 75
+  And I visit homepage
   Then I should be prompted to guess number
 
  Scenario: guess too low
