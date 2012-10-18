@@ -1,5 +1,7 @@
 Given /^the number to guess is (\d+)$/ do |the_number|
-  Games.first.number.should eq(the_number)
+  
+  Factory(:game, :number => the_number.to_i)
+  Game.first.number.should eq(the_number.to_i)
 end
 
 When /^I visit homepage$/ do
