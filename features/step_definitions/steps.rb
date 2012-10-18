@@ -1,3 +1,7 @@
+Given /^the number to guess is (\d+)$/ do |the_number|
+  Games.first.number.should eq(the_number)
+end
+
 When /^I visit homepage$/ do
   visit '/guess'
 end
@@ -14,4 +18,9 @@ end
 
 Then /^I should be advised to guess higher$/ do
   page.should have_content('Guess higher...')
+end
+
+
+Then /^I should be advised to guess lower$/ do
+  page.should have_content('Guess lower...')
 end
