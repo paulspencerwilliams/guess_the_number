@@ -1,7 +1,7 @@
 When /^I visit homepage$/ do
-  pending # express the regexp above with the code you wish you had
+  visit '/guess'
 end
 
 Then /^I should be prompted to guess number$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content('Guess a number')
 end
