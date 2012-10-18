@@ -12,5 +12,5 @@ When /^I guess (\d+)$/ do |my_guess|
 end
 
 Then /^I should be advised to guess higher$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content('Guess higher...')
 end
