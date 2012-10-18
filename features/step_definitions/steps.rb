@@ -3,8 +3,8 @@ When /^I visit homepage$/ do
 end
 
 Then /^I should be prompted to guess number$/ do
-	page.should have_content('Guess higher...')
-  page.should have_no_content('Guess a number')
+	page.should have_no_content('Guess higher...')
+  page.should have_content('Guess a number')
 end
 
 When /^I guess (\d+)$/ do |my_guess|
