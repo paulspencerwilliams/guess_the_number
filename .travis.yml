@@ -1,5 +1,14 @@
 language: ruby
 rvm:
   - 1.9.3
+env:
+  secure: "wrjgQIW5PHr0hwkVk9cAYLYFadO/6EHrTHvi/pf8i+18zQKcjvcX8EXrm60/\nuQFlN4qDgUeB09G3wr78gQpwLUazoV72CGe8oC0DQhhWXx1hCuToRwuDv9N9\n6fYxoa1F27AU+6Jb3RyW1X4VMukdopyG7MsIRFWVdbOQG7mvcDI="
 before_script:
   - "rake db:migrate RAILS_ENV=test"
+
+after_script:
+  - gem install heroku
+  - yes | ruby travis_deployer.rb
+  - heroku keys:clear
+  - yes | heroku keys:add
+  - git push heroku master
