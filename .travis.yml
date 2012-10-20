@@ -12,3 +12,11 @@ after_script:
   - heroku keys:clear
   - yes | heroku keys:add
   - git push heroku master
+
+notifications:
+  email:
+    recipients:
+      - paulswilliams@me.com 
+    on_success: always # default: change
+    on_failure: always # default: always
+    # on_failure: [always|never|change] # default: always
