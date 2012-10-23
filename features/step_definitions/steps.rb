@@ -19,8 +19,7 @@ When /^I guess (\d+)$/ do |my_guess|
 end
 
 
-Then /^I should be advised discovered the answer to the meaning of life the universe and ever
-ything$/ do
+Then /^I should be advised discovered the answer to the meaning of life the universe and everything$/ do
   page.should have_content('You have discovered the answer to the meaning of life the universe and everything')
 end
 
