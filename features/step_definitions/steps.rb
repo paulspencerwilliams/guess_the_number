@@ -18,6 +18,13 @@ When /^I guess (\d+)$/ do |my_guess|
 	click_button 'Guess'
 end
 
+
+Then /^I should be advised discovered the answer to the meaning of life the universe and ever
+ything$/ do
+  page.should have_content('You have discovered the answer to the meaning of life the universe and everything')
+end
+
+
 Then /^I should be advised to guess higher$/ do
   page.should have_content('Guess higher...')
 end
@@ -31,3 +38,6 @@ end
 Then /^I should be advised correct guess$/ do
   page.should have_content('Correct!!!')
 end
+
+
+
