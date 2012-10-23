@@ -15,3 +15,9 @@ Scenario: prompt for number
  	And the number to guess is 75
  	When I guess 76
  	Then I should be advised to guess lower
+
+ 	Scenario: guess correct number
+ 	Given I visit homepage
+ 	And the number to guess is 75
+ 	When I guess 75
+ 	Then I should be advised correct guess

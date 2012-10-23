@@ -26,3 +26,8 @@ end
 Then /^I should be advised to guess lower$/ do
   page.should have_content('Guess lower...')
 end
+
+
+Then /^I should be advised correct guess$/ do
+  page.should have_content('Correct!!!')
+end

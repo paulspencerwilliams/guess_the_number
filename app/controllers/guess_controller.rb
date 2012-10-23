@@ -9,6 +9,8 @@ class GuessController < ApplicationController
 				@try = :higher
 			elsif number > Game.first.number
 				@try = :lower
+			else
+				@try = :correct
 			end
 			
 		end
